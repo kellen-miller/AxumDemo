@@ -32,11 +32,11 @@ use serde_json::{
     json,
     Value,
 };
-use tracing_subscriber::fmt::layer;
-use tracing_subscriber::layer::SubscriberExt;
-use tracing_subscriber::util::SubscriberInitExt;
-
-/// Use tracing crates for application-level tracing output.
+use tracing_subscriber::{
+    fmt::layer,
+    layer::SubscriberExt,
+    util::SubscriberInitExt,
+};
 
 use crate::book::Book;
 use crate::data::DATA;
