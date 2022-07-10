@@ -46,8 +46,11 @@ mod data;
 
 #[tokio::main]
 pub async fn main() {
-    let host = [127, 0, 0, 1];
-    let port = 3000;
+    let host = [0, 0, 0, 0];
+    let port = std::env::var("PORT")
+        .ok()
+        .and_then(|s| s.parse().ok())
+        .unwrap_or(8080);
     let addr = SocketAddr::from((host, port));
     // Start tracing.
     tracing_subscriber::registry()

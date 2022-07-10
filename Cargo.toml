@@ -1,5 +1,5 @@
 [package]
-name = "rust-axum-playgorund"
+name = "axum-demo"
 version = "0.1.0"
 edition = "2021"
 
