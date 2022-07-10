@@ -4,7 +4,6 @@ FROM rust:latest as build
 RUN USER=root cargo new --bin axum-demo
 WORKDIR /axum-demo
 
-COPY ./Cargo.lock ./Cargo.lock
 COPY ./Cargo.toml ./Cargo.toml
 RUN cargo build --release
 
